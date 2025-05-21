@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+    /* Tipografías */
+    --font-title: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    /* Paleta de colores personalizada */
+    --color-brand-light: #A5ABAF;
+    --color-brand-medium: #605D5C;
+    --color-brand-dark: #3F3C3A;
+    --color-brand-deep: #2F2A25;
+    --color-brand-accent: #D64218;
+    --color-brand-bg: #32373D;
+    --color-brand-contact-bg: #492617;
+    --color-brand-about-bg: #414A5A;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@layer utilities {
+    .animate-fade-up {
+        animation: fadeUp 3.0s ease-out forwards;
+    }
+}
+
