@@ -3,14 +3,13 @@ import HeroBtn from "./components/HeroBtn";
 import { Typewriter } from 'react-simple-typewriter';
 
 type HeroContainerProps = {
-    scrollToSection: (ref: React.RefObject<HTMLElement | null>) => void
     aboutRef: React.RefObject<HTMLElement | null>
     projectsRef: React.RefObject<HTMLElement | null>
     contactRef: React.RefObject<HTMLElement | null>
     heroRef: React.RefObject<HTMLElement | null>
 }
 
-const HeroContainer = ({ scrollToSection, aboutRef, projectsRef, contactRef, heroRef }: HeroContainerProps) => {
+const HeroContainer = ({ aboutRef, projectsRef, contactRef, heroRef }: HeroContainerProps) => {
 
 
 
@@ -47,7 +46,10 @@ const HeroContainer = ({ scrollToSection, aboutRef, projectsRef, contactRef, her
                     { label: 'Proyectos', ref: projectsRef },
                     { label: 'Contacto', ref: contactRef },
                 ].map((btn, i) => (
-                    <HeroBtn btn={btn} i={i} scrollToSection={scrollToSection} />
+                    <HeroBtn
+                        btn={btn}
+                        i={i}
+                    />
                 ))}
             </div>
         </section>

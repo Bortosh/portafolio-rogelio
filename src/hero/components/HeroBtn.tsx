@@ -1,7 +1,6 @@
 import React from 'react'
 
 type HeroBtnProps = {
-    scrollToSection: (ref: React.RefObject<HTMLElement | null>) => void
     btn: {
         label: string;
         ref: React.RefObject<HTMLElement | null>;
@@ -9,8 +8,12 @@ type HeroBtnProps = {
     i: number
 }
 
-const HeroBtn = ({ scrollToSection, btn, i }: HeroBtnProps) => {
-    
+const HeroBtn = ({ btn, i }: HeroBtnProps) => {
+
+    const scrollToSection = (ref: React.RefObject<HTMLElement | null>) => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <button
             key={i}
