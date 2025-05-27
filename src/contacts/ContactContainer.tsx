@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaEnvelope, FaDownload, FaGithub } from 'react-icons/fa';
 import ScrollBotonContact from './component/ScrollBotonContact';
 
@@ -11,12 +10,8 @@ type ContactContainerProps = {
 const ContactContainer = ({ projectsRef, contactRef }: ContactContainerProps) => {
 
     return (
-        <motion.section
+        <section
             ref={contactRef}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.6 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
             className="relative min-h-screen bg-brand-contact-bg text-brand-light flex flex-col justify-center items-center px-4 sm:px-8 py-20 text-center"
         >
 
@@ -73,7 +68,7 @@ const ContactContainer = ({ projectsRef, contactRef }: ContactContainerProps) =>
                     ref={projectsRef}
                 />
             </div>
-        </motion.section>
+        </section>
     );
 };
 

@@ -14,12 +14,12 @@ const HeroContainer = ({ aboutRef, projectsRef, contactRef, heroRef }: HeroConta
 
 
     return (
-        <section ref={heroRef} className="h-screen bg-brand-bg text-white flex flex-col justify-center items-center px-4">
+        <section ref={heroRef} className="h-screen bg-brand-hero-bg text-white flex flex-col justify-center items-center px-4">
             <h1 className="animate-fade-up font-title text-3xl sm:text-4xl md:text-5xl font-bold text-brand-light leading-tight tracking-wide text-center">
                 Rogelio Ramírez Carmona
             </h1>
             <p className="font-body text-xl font-semibold mt-6 text-brand-light tracking-wide">
-                Frontend Developer
+                Software Developer · Frontend Specialist
             </p>
             <p className="font-mono text-sm sm:text-base lg:text-lg mt-2 text-brand-light opacity-70 max-w-md md:max-w-lg lg:max-w-xl text-center">
                 <Typewriter

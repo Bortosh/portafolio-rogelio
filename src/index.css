@@ -12,9 +12,10 @@
     --color-brand-dark: #3F3C3A;
     --color-brand-deep: #2F2A25;
     --color-brand-accent: #D64218;
-    --color-brand-bg: #32373D;
-    --color-brand-contact-bg: #312E2E;
-    --color-brand-about-bg: #0d1117;
+    --color-brand-hero-bg: #2e3238;
+    --color-brand-about-bg: #1f2328;
+    --color-brand-project-bg: #14171b;
+    --color-brand-contact-bg: #0d1117;
 }
 
 html {

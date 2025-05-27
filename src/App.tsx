@@ -31,7 +31,6 @@ function App() {
         heroRef={heroRef}
       />
       <ProjectContainer
-        scrollToSection={scrollToSection}
         aboutRef={aboutRef}
         projectsRef={projectsRef}
         contactRef={contactRef}
