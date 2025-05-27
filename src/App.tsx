@@ -37,7 +37,6 @@ function App() {
         contactRef={contactRef}
       />
       <ContactContainer
-        scrollToSection={scrollToSection}
         projectsRef={projectsRef}
         contactRef={contactRef}
       />

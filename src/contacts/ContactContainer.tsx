@@ -1,52 +1,80 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaEnvelope, FaDownload, FaGithub } from 'react-icons/fa';
+import ScrollBotonContact from './component/ScrollBotonContact';
 
 type ContactContainerProps = {
-    scrollToSection: (ref: React.RefObject<HTMLElement | null>) => void
-    projectsRef: React.RefObject<HTMLElement | null>
-    contactRef: React.RefObject<HTMLElement | null>
-}
+    projectsRef: React.RefObject<HTMLElement | null>;
+    contactRef: React.RefObject<HTMLElement | null>;
+};
 
-const ContactContainer = ({ scrollToSection, projectsRef, contactRef }: ContactContainerProps) => {
+const ContactContainer = ({ projectsRef, contactRef }: ContactContainerProps) => {
 
     return (
-        <section ref={contactRef} className="min-h-screen bg-brand-contact-bg text-brand-light flex flex-col justify-center items-center px-4 sm:px-8 py-20 text-center">
-            <div className="max-w-3xl">
+        <motion.section
+            ref={contactRef}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.6 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="relative min-h-screen bg-brand-contact-bg text-brand-light flex flex-col justify-center items-center px-4 sm:px-8 py-20 text-center"
+        >
+
+            <div className="max-w-4xl">
+                <p className="text-sm uppercase tracking-wide text-brand-light/50 mb-2">
+                    Contacto directo
+                </p>
                 <h2 className="text-4xl sm:text-5xl font-title font-bold mb-6 text-brand-light">
                     Hablemos
                 </h2>
 
-                <p className="text-lg sm:text-xl text-brand-light/90 mb-8 leading-relaxed">
-                    Siempre estoy abierto a nuevas ideas, propuestas y oportunidades. Si tienes un proyecto en mente o estás buscando un desarrollador frontend para un nuevo desafío, estaré encantado de escucharte. Seguro podemos crear juntos algo increíble.
+                <p className="text-lg sm:text-xl text-brand-light/90 mb-8 leading-relaxed max-w-5xl mx-auto">
+                    ¿Tienes una idea en mente o estás buscando un frontend developer para tu próximo proyecto?
+                    Me especializo en construir interfaces modernas, funcionales y con una arquitectura frontend escalable.
+                    Además, cuento con experiencia en desarrollo backend con Node.js y Express, lo que me permite integrarme fácilmente en entornos fullstack.
+                    Estoy disponible y listo para ayudarte a convertir esa visión en una experiencia digital profesional y atractiva.
                 </p>
 
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a
-                        href="mailto:rogelio@email.com"
-                        className="border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-bg transition"
-                    >
-                        Enviarme un correo
-                    </a>
 
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
                     <a
-                        href="/Rogelio-Ramirez-CV.pdf"
+                        href="mailto:rogelios-1992@hotmail.com"
+                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-bg transition transform hover:scale-105 duration-300"
+                    >
+                        <FaEnvelope /> Enviarme un correo
+                    </a>
+                    <a
+                        href="/CV_ATS_ROGELIO_RAMIREZ_CARMONA_ENGLISH.docx"
                         download
-                        className="border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-bg transition"
+                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-bg transition transform hover:scale-105 duration-300"
                     >
-                        Descargar CV
+                        <FaDownload /> Descargar CV
                     </a>
 
                     <a
-                        href="https://github.com/rogx-dev"
+                        href="https://github.com/Bortosh?tab=repositories"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-brand-light hover:text-brand-accent underline"
+                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-bg transition transform hover:scale-105 duration-300"
                     >
-                        Visita mi GitHub
+                        <FaGithub /> Visita mi GitHub
                     </a>
                 </div>
+
+                <p className="text-sm text-brand-light/50 italic mt-10">
+                    “Las grandes ideas comienzan con una buena conversación.”
+                </p>
+
+                <div className="border-t border-brand-light/20 mt-14 pt-6 text-sm text-brand-light/40">
+                    Gracias por visitar mi portafolio. ¡Hablemos pronto!
+                </div>
+
+                <ScrollBotonContact
+                    ref={projectsRef}
+                />
             </div>
-        </section>
+        </motion.section>
     );
-}
+};
 
 export default ContactContainer;
