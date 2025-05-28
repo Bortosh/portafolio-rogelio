@@ -6,16 +6,27 @@
     --font-body: 'Work Sans', sans-serif;
     --font-mono: 'Space Mono', monospace;
 
-    /* Paleta de colores personalizada */
+    /* Paleta base */
     --color-brand-light: #A5ABAF;
     --color-brand-medium: #605D5C;
     --color-brand-dark: #3F3C3A;
     --color-brand-deep: #2F2A25;
     --color-brand-accent: #D64218;
+
+    /* Fondos por sección */
     --color-brand-hero-bg: #2e3238;
     --color-brand-about-bg: #1f2328;
     --color-brand-project-bg: #14171b;
     --color-brand-contact-bg: #0d1117;
+
+    /* Nuevos colores UI inspirados en GitHub Dark */
+    --color-ui-border: #30363d;
+    --color-ui-bg: #161b22;
+    --color-ui-hover-bg: #21262d;
+    --color-ui-text: #c9d1d9;
+    --color-link: #8e97a0;
+    --color-link-accent: #58a6ff;
+    --color-link-hover: #ffffff;
 }
 
 html {
@@ -39,4 +50,3 @@ html {
         animation: fadeUp 3.0s ease-out forwards;
     }
 }
-

@@ -18,7 +18,7 @@ const HeroBtn = ({ btn, i }: HeroBtnProps) => {
         <button
             key={i}
             onClick={() => scrollToSection(btn.ref)}
-            className="min-w-[120px] px-4 sm:px-6 py-2 rounded-xs text-sm font-medium border border-brand-light text-brand-light hover:bg-brand-light hover:text-brand-bg cursor-pointer transition duration-500 text-center"
+            className="min-w-[120px] px-4 sm:px-6 py-2 rounded-xs text-sm font-medium border border-brand-light text-brand-light hover:bg-brand-light hover:text-brand-hero-bg cursor-pointer transition duration-500 text-center"
         >
             {btn.label}
         </button>

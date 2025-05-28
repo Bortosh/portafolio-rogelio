@@ -98,21 +98,21 @@ const ProjectContainer = ({ projectsRef, aboutRef, contactRef }: ProjectContaine
                     {projects.map((project, index) => (
                         <div
                             key={project.nombre}
-                            className={`p-5 flex flex-col md:flex-row items-center gap-8 group transition duration-600 hover:bg-brand-hero-bg/50 hover:shadow-lg rounded-xl ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                            className={`p-5 flex flex-col md:flex-row items-center gap-8 group transition duration-600 hover:bg-brand-hero-bg/20 hover:shadow-lg rounded-xl ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                         >
                             <img
                                 src={project.imagen}
                                 alt={project.nombre}
-                                className="w-full md:w-1/2 rounded-lg shadow-md object-cover"
+                                className="w-full md:w-1/2 rounded-lg shadow-md object-cover opacity-90"
                             />
                             <div className="flex-1 text-center md:text-left space-y-4">
                                 <h3 className="text-2xl font-semibold">{project.nombre}</h3>
-                                <p className="text-brand-light/80">{project.descripcion}</p>
+                                <p className="text-brand-light/80 text-justify">{project.descripcion}</p>
                                 <ul className="flex flex-wrap gap-2 text-sm">
                                     {project.tecnologias.map((tech) => (
                                         <li
                                             key={tech}
-                                            className="px-2 py-1 border border-brand-accent/30 text-brand-accent rounded-xs"
+                                            className="px-2 py-1 border border-ui-border bg-ui-bg text-ui-text rounded-xs text-xs hover:bg-ui-hover-bg transition"
                                         >
                                             {tech}
                                         </li>
@@ -122,7 +122,7 @@ const ProjectContainer = ({ projectsRef, aboutRef, contactRef }: ProjectContaine
                                     <a
                                         href={project.demo}
                                         target="_blank"
-                                        className="text-brand-accent hover:underline"
+                                        className="flex items-center gap-1 text-[#8e97a0] hover:underline transition"
                                     >
                                         🔗 Demo
                                     </a>
@@ -131,14 +131,14 @@ const ProjectContainer = ({ projectsRef, aboutRef, contactRef }: ProjectContaine
                                             <a
                                                 href={project.repo_front}
                                                 target="_blank"
-                                                className="text-brand-accent hover:underline"
+                                                className="flex items-center gap-1 text-link-accent hover:text-brand-light transition"
                                             >
                                                 📂 Código Front
                                             </a>
                                             <a
                                                 href={project.repo_back}
                                                 target="_blank"
-                                                className="text-brand-accent hover:underline"
+                                                className="flex items-center gap-1 text-link-accent hover:text-brand-light transition"
                                             >
                                                 📂 Código Back
                                             </a>
@@ -147,7 +147,7 @@ const ProjectContainer = ({ projectsRef, aboutRef, contactRef }: ProjectContaine
                                         <a
                                             href={project.repo_front}
                                             target="_blank"
-                                            className="text-brand-accent hover:underline"
+                                            className="flex items-center gap-1 text-link-accent hover:text-brand-light transition"
                                         >
                                             📂 Código
                                         </a>

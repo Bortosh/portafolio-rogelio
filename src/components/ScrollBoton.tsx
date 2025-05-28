@@ -12,9 +12,9 @@ const ScrollBoton = ({ ref, text, position }: ScrollBotonProps) => {
         ref.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const up = "absolute top-6 right-6 border border-brand-light rounded-xs text-base px-10 py-2 hover:bg-brand-light hover:text-brand-bg transition duration-300 cursor-pointer shadow-sm"
+    const up = "absolute top-6 right-6 border border-brand-light rounded-xs text-base px-10 py-2 hover:bg-brand-light hover:text-brand-hero-bg transition duration-300 cursor-pointer shadow-sm"
 
-    const down = "absolute bottom-6 right-6 border border-brand-light rounded-xs text-base px-6 py-2 hover:bg-brand-light hover:text-brand-bg transition duration-300 cursor-pointer shadow-sm"
+    const down = "absolute bottom-6 right-6 border border-brand-light rounded-xs text-base px-6 py-2 hover:bg-brand-light hover:text-brand-hero-bg transition duration-300 cursor-pointer shadow-sm"
 
     return (
         <button

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaDownload, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaDownload, FaGithub, FaLinkedin  } from 'react-icons/fa';
 import ScrollBotonContact from './component/ScrollBotonContact';
 
 type ContactContainerProps = {
@@ -34,14 +34,14 @@ const ContactContainer = ({ projectsRef, contactRef }: ContactContainerProps) =>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
                     <a
                         href="mailto:rogelios-1992@hotmail.com"
-                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-bg transition transform hover:scale-105 duration-300"
+                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-hero-bg transition transform hover:scale-105 duration-300"
                     >
                         <FaEnvelope /> Enviarme un correo
                     </a>
                     <a
                         href="/CV_ATS_ROGELIO_RAMIREZ_CARMONA_ENGLISH.docx"
                         download
-                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-bg transition transform hover:scale-105 duration-300"
+                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-hero-bg transition transform hover:scale-105 duration-300"
                     >
                         <FaDownload /> Descargar CV
                     </a>
@@ -50,9 +50,17 @@ const ContactContainer = ({ projectsRef, contactRef }: ContactContainerProps) =>
                         href="https://github.com/Bortosh?tab=repositories"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-bg transition transform hover:scale-105 duration-300"
+                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-hero-bg transition transform hover:scale-105 duration-300"
                     >
                         <FaGithub /> Visita mi GitHub
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/rogelio-ramirez-carmona/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 border border-brand-light px-6 py-2 rounded-xs text-brand-light hover:bg-brand-light hover:text-brand-hero-bg transition transform hover:scale-105 duration-300"
+                    >
+                        <FaLinkedin /> Visita mi Linkedin
                     </a>
                 </div>
 
