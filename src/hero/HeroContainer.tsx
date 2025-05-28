@@ -19,7 +19,7 @@ const HeroContainer = ({ aboutRef, projectsRef, contactRef, heroRef }: HeroConta
                 Rogelio Ramírez Carmona
             </h1>
             <p className="font-body text-xl font-semibold mt-6 text-brand-light tracking-wide">
-                Software Developer · Frontend Specialist
+                Software Developer
             </p>
             <p className="font-mono text-sm sm:text-base lg:text-lg mt-2 text-brand-light opacity-70 max-w-md md:max-w-lg lg:max-w-xl text-center">
                 <Typewriter

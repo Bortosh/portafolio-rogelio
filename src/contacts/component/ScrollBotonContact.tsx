@@ -13,7 +13,7 @@ const ScrollBotonContact = ({ ref }: ScrollBotonProps) => {
     return (
         <button
             onClick={() => scrollToSection(ref)}
-            className="absolute top-10 right-6 border border-brand-light rounded-xs text-base px-10 py-2 hover:bg-brand-light hover:text-brand-bg transition duration-300 cursor-pointer shadow-sm"
+            className="absolute top-6 right-6 border border-brand-light rounded-xs text-base px-10 py-2 hover:bg-brand-light hover:text-brand-bg transition duration-300 cursor-pointer shadow-sm"
         >
             ↑ Proyectos
         </button>
